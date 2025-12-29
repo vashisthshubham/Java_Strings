@@ -1,0 +1,23 @@
+// Program to check if a string is palindrome
+
+class Main {
+    public static void main(String[] args) 
+    {
+        String str = "madam";
+        StringBuilder s = new StringBuilder();
+        
+        for(int i=str.length()-1;i>=0;i--)
+        {
+            s.append(str.charAt(i));
+        }
+        
+        if(str.equals(s.toString()))
+        {
+            System.out.println("palindrome string");
+        }
+        else
+        {
+            System.out.println("string is not palindrome");
+        }
+    }
+}
