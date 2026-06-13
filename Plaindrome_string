@@ -21,3 +21,29 @@ class Main {
         }
     }
 }
+
+
+//  practice 
+
+class Main {
+    public static void main(String[] args) 
+    {
+        System.out.println("Start small. Ship something.");
+        
+        String str = "abcdcba";
+        String s = "";
+        for(int i=str.length()-1;i>=0;i--)
+        {
+            s = s + str.charAt(i);
+        }
+        
+        if(s.equals(str))
+        {
+            System.out.println("Palindrome");
+        }
+        else
+        {
+            System.out.println("Not Palindrome");
+        }
+    }
+}
