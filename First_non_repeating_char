@@ -1,0 +1,49 @@
+import java.util.HashMap;
+class Main 
+{
+    public static void main(String[] args) 
+    {
+        System.out.println("Start small. Ship something.");
+        
+        String s = "Start small. Ship something";
+        
+      HashMap<Character,Integer> h = new HashMap<>();
+      
+      for(int i=0;i<=s.length()-1;i++)
+      {
+          Character c = s.charAt(i);
+          if(!h.containsKey(s.charAt(i)))
+          {
+              h.put(c,1);
+          }
+          else
+          {
+              h.put(c,h.get(c)+1);
+          }
+      }
+      
+      for(int i=0;i<=s.length()-1;i++)
+      {
+          Character p = s.charAt(i);
+          if(h.get(p)==1)
+          {
+              System.out.println("first non-repeating character is:"+p);
+              break;
+          }
+      }
+      
+    //   for(Character c : h.keySet())
+    //   {
+    //       if(h.get(c) == 1)
+    //       {
+    //           System.out.println("First non-repeating character is: "+c);
+    //           break;
+    //       }
+    //       else
+    //       {
+    //           continue;
+    //       }
+    //   }
+      
+    }
+}
